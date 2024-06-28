@@ -19,3 +19,7 @@ test('handles new lines between numbers', () => {
 test('throws an exception for negative numbers', () => {
     expect(() => add('1,-2,3')).toThrow('negative numbers not allowed -2')
 })
+
+test('shows all the negative numbers seperated by comma in the exception message', () => {
+    expect(() => add('-1,-2,3')).toThrow('negative numbers not allowed -1,-2')
+})
